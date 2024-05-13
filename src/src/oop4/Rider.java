@@ -4,10 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Rider {
-    //hi
     private String name;
-    //ciao
-    //moiners
     private HashSet<Horse> preferences;
 
     public Rider(String name, Set<Horse> preferences){
