@@ -7,6 +7,7 @@ public class Rider {
     //hi
     private String name;
     //ciao
+    //moiners
     private HashSet<Horse> preferences;
 
     public Rider(String name, Set<Horse> preferences){
