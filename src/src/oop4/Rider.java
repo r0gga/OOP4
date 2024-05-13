@@ -6,6 +6,7 @@ import java.util.Set;
 public class Rider {
     //hi
     private String name;
+    //ciao
     private HashSet<Horse> preferences;
 
     public Rider(String name, Set<Horse> preferences){
