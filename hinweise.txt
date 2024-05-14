@@ -1,1 +1,3 @@
 lieber arraylist als hashhset für preferences?
+
+wir könnten auch was mit vererbung machen: Pferd und Reiter haben beide Name und ne eigenschaft, dann hätte man  bissl mehr oop und n spannendes UML
