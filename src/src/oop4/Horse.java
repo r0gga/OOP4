@@ -9,4 +9,8 @@ public class Horse {
         this.name = name;
         this.characteristic = characteristic;
     }
+
+    public String getName(){
+        return this.name;
+    }
 }

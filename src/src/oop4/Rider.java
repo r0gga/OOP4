@@ -13,4 +13,14 @@ public class Rider {
         this.characteristic=characteristic;
         this.preferences = new HashSet<>(preferences);
     }
+
+    public String getName(){
+        return this.name;
+    }
+    public int getCharacteristic(){
+        return this.characteristic;
+    }
+    public Set<Horse> getPreferences(){
+        return this.preferences;
+    }
 }
