@@ -13,4 +13,7 @@ public class Horse {
     public String getName(){
         return this.name;
     }
+    public int getCharacteristic(){
+        return characteristic;
+    }
 }
