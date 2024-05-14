@@ -18,5 +18,12 @@ public class RiderHorseMatching {
         maxMatches = 0;
     }
 
+    // match prüft, ob ein Reiter und ein Pferd eine gültige Kommbination bilden
+    private boolean match(Rider rider, Horse horse){
+        return rider.getCharacteristic() == horse.getCharacteristic() ||
+                (rider.getCharacteristic() == 1 && horse.getCharacteristic() == 0) ||
+                (rider.getCharacteristic() == 2 && horse.getCharacteristic() == 1 || horse.getCharacteristic() == 0);
+    }
+
 
 }
