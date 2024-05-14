@@ -14,7 +14,7 @@ public class RiderHorseMatching {
     public RiderHorseMatching(List<Rider> riders, List<Horse> horses){
         this.riders = riders;
         this.horses = horses;
-        bestMatches = new HashMap<>();
+        this.bestMatches = new HashMap<>();
         maxWishes = 0;
     }
 
@@ -63,6 +63,9 @@ public class RiderHorseMatching {
 
 
     }
+
+    public Map<Rider, Horse> getBestMatches() {return bestMatches;}
+    public int getMaxWishes() {return maxWishes;}
 
 
 }
