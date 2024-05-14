@@ -36,12 +36,7 @@ public class RiderHorseMatching {
         return wishAssignments;
     }
 
-    //array das angibt, ob ein Pferd vergeben ist, für findBestMatches Methode
-    boolean[] horseOccupied = new boolean[horses.size()];
 
-    // Map, die die aktuellen Matches speichert, für findBestMatches Methode
-
-    Map<Horse, Rider> currentAsignments = new HashMap<>();
     //
     public void findBestMatches(int index, Map<Rider, Horse> currentMatches, boolean[] horseOccupied){
         if(index == riders.size()){
