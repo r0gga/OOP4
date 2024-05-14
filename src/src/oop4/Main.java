@@ -21,6 +21,7 @@ public class Main {
         test.findBestMatches(0, currentAsignments, horseOccupied);
 
         System.out.println("Es können maximal " + test.getMaxWishes() + " Wünsche erfüllt werden.");
+        System.out.println("Die beste Zuordnung ist: ");
         for (Map.Entry<Rider, Horse> entry : test.getBestMatches().entrySet()) {
             System.out.println(entry.getKey().getName() + " reitet auf " + entry.getValue().getName() + ".");
         }
