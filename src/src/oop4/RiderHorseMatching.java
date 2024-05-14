@@ -43,7 +43,7 @@ public class RiderHorseMatching {
             int fulfilledWishes = calculateMatches(currentMatches);
             if(fulfilledWishes > maxWishes){
                 maxWishes = fulfilledWishes;
-                bestMatches = currentMatches;
+                bestMatches = new HashMap<>(currentMatches);
             }
             return;
         }
