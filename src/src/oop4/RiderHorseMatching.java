@@ -15,7 +15,7 @@ public class RiderHorseMatching {
         this.riders = riders;
         this.horses = horses;
         this.bestMatches = new HashMap<>();
-        maxWishes = 0;
+        this.maxWishes = 0;
     }
 
     // match prüft, ob ein Reiter und ein Pferd eine gültige Kommbination bilden
