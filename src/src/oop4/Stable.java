@@ -12,11 +12,11 @@ public class Stable {
     public Stable(){
         riders = new ArrayList<>();
         horses = new ArrayList<>();
-        example1();
+        fillStable();
     }
 
     //characteristic 0: anfänger, 1: gute reiter, 2: sehr gute reiter
-    public void example1(){
+    public void fillStable(){
         Horse alex = new Horse("Alex", 0);
         Horse nicki = new Horse("Nicki", 2);
         Horse pucki = new Horse("Pucki", 0);
