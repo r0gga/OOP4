@@ -1,5 +1,6 @@
 package oop4;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -9,7 +10,9 @@ public class Stable {
     private List<Horse> horses;
 
     public Stable(){
-
+        riders = new ArrayList<>();
+        horses = new ArrayList<>();
+        example1();
     }
 
     //characteristic 0: anfänger, 1: gute reiter, 2:sehr gute reiter
@@ -32,6 +35,24 @@ public class Stable {
         Rider emil = new Rider("Emil", 0, allhorses);
         Rider fritz = new Rider("Fritz", 2, new HashSet<>(Arrays.asList(sturmwind, hurrikan)));
         Rider gabi = new Rider("Gabi", 1, new HashSet<>(Arrays.asList(hurrikan, sturmwind, tornado, alex)));
+
+        riders.add(anja);
+        riders.add(bertram);
+        riders.add(christa);
+        riders.add(doris);
+        riders.add(emil);
+        riders.add(fritz);
+        riders.add(gabi);
+
+        horses.add(alex);
+        horses.add(nicki);
+        horses.add(pucki);
+        horses.add(wittchen);
+        horses.add(hurrikan);
+        horses.add(tornado);
+        horses.add(sturmwind);
+        horses.add(zausel);
+        horses.add(zackzack);
     }
 
 }
