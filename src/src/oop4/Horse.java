@@ -5,7 +5,7 @@ public class Horse {
     private String name;
     private int characteristic;
 
-    private Horse(String name, int characteristic){
+    public Horse(String name, int characteristic){ //constructor war voher private, aber wieso? xd
         this.name = name;
         this.characteristic = characteristic;
     }
