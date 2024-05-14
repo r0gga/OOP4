@@ -18,7 +18,7 @@ public class RiderHorseMatching {
         this.maxWishes = 0;
     }
 
-    // match prüft, ob ein Reiter und ein Pferd eine gültige Kommbination bilden
+    // match prüft, ob ein Reiter und ein Pferd eine gültige Kombination bilden
     private boolean match(Rider rider, Horse horse){
         return rider.getCharacteristic() == horse.getCharacteristic() ||
                 (rider.getCharacteristic() == 1 && horse.getCharacteristic() == 0) ||
@@ -37,7 +37,7 @@ public class RiderHorseMatching {
     }
 
 
-    //
+    //rekursive Methode um die besten Matches zu ermitteln
     public void findBestMatches(int index, Map<Rider, Horse> currentMatches, boolean[] horseOccupied){
         if(index == riders.size()){
             int fulfilledWishes = calculateMatches(currentMatches);
