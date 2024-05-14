@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class RiderHorseMatching {
 
-    private List<Rider> riders;
-    private List<Horse> horses;
+    private final List<Rider> riders;
+    private final List<Horse> horses;
     private Map<Rider, Horse> bestMatches;
     private int maxWishes;
 
