@@ -9,4 +9,11 @@ public class RiderHorseMatching {
     private List<Horse> horses;
     private Map<Rider, Horse> bestMatches;
     private int maxMatches;
+
+    public RiderHorseMatching(List<Rider> riders, List<Horse> horses){
+        this.riders = riders;
+        this.horses = horses;
+    }
+
+
 }
