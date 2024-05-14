@@ -55,4 +55,11 @@ public class Stable {
         horses.add(zackzack);
     }
 
+    public List<Rider> getRiders(){
+        return this.riders;
+    }
+    public List<Horse> getHorses(){
+        return this.horses;
+    }
+
 }
