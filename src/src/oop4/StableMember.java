@@ -14,6 +14,6 @@ public class StableMember {
         return this.name;
     }
     public int getCharacteristic(){
-        return this.getCharacteristic();
+        return this.characteristic;
     }
 }
