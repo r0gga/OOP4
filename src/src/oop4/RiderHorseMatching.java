@@ -25,5 +25,16 @@ public class RiderHorseMatching {
                 (rider.getCharacteristic() == 2 && horse.getCharacteristic() == 1 || horse.getCharacteristic() == 0);
     }
 
+    //calculate Matches geht die zugeordneten Reiter und Pferde durch, und schaut, wie viele der Reiter ein gewünschtes Pferde bekommen haben
+    private int calculateMatches(Map<Rider, Horse> assignments){
+        int wishAssignments = 0;
+        for(Map.Entry<Rider, Horse> entry : assignments.entrySet()){
+            if(entry.getKey().getPreferences().contains(entry.getValue().getName())){
+                wishAssignments++;
+            }
+        }
+        return wishAssignments;
+    }
+
 
 }
