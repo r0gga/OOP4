@@ -29,7 +29,7 @@ public class RiderHorseMatching {
     private int calculateMatches(Map<Rider, Horse> assignments){
         int wishAssignments = 0;
         for(Map.Entry<Rider, Horse> entry : assignments.entrySet()){
-            if(entry.getKey().getPreferences().contains(entry.getValue().getName())){
+            if(entry.getKey().getPreferences().contains(entry.getValue())){
                 wishAssignments++;
             }
         }
