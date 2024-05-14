@@ -3,10 +3,10 @@ package oop4;
 public class Horse {
 
     private String name;
-    private String skill;
+    private int characteristic;
 
-    private Horse(String name, String skill){
+    private Horse(String name, int characteristic){
         this.name = name;
-        this.skill = skill;
+        this.characteristic = characteristic;
     }
 }
