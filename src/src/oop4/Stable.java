@@ -18,7 +18,7 @@ public class Stable {
     //characteristic 0: anfänger, 1: gute reiter, 2: sehr gute reiter
     public void fillStable(){
         Horse alex = new Horse("Alex", 0);
-        Horse nicki = new Horse("Nicki", 2);
+        Horse nicki = new Horse("Nicki", 1);
         Horse pucki = new Horse("Pucki", 0);
         Horse wittchen = new Horse("Wittchen", 0);
         Horse hurrikan = new Horse("Hurrikan", 1);
