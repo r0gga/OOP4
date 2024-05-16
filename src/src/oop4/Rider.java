@@ -5,15 +5,15 @@ import java.util.Set;
 
 public class Rider extends StableMember{
 
-    final private Set<Horse> preferences;
+    final private Set<Horse> PREFERENCES;
 
 
     public Rider(String name, int characteristic, Set<Horse> preferences){
         super(name, characteristic);
-        this.preferences = new HashSet<>(preferences);
+        this.PREFERENCES = new HashSet<>(preferences);
     }
 
     public Set<Horse> getPreferences(){
-        return this.preferences;
+        return this.PREFERENCES;
     }
 }
