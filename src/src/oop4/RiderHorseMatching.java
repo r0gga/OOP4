@@ -125,8 +125,6 @@ public class RiderHorseMatching{
                     new_horses.addAll(horses);
                     new_horses.remove(horse);
 
-                    //result.getMap().put(rider, horse);
-
                     MatchingResult new_result = matching(new_riders, new_horses);
                     new_result.getMap().put(rider, horse);
                     new_result.increaseScore();
