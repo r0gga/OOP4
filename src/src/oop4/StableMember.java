@@ -1,19 +1,19 @@
 package oop4;
 
 public class StableMember {
-    final private String name;
-    final private int characteristic; // 0 = Anfänger, 1 = gute Reiter, 2 = sehr gute Reiter
+    final private String NAME;
+    final private int CHARACTERISTIC; // 0 = Anfänger, 1 = gute Reiter, 2 = sehr gute Reiter
 
     public StableMember(String name, int characteristic){
-        this.name=name;
-        this.characteristic=characteristic;
+        this.NAME=name;
+        this.CHARACTERISTIC=characteristic;
     }
 
 
     public String getName(){
-        return this.name;
+        return this.NAME;
     }
     public int getCharacteristic(){
-        return this.getCharacteristic();
+        return this.CHARACTERISTIC;
     }
 }

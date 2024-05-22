@@ -1,29 +1,23 @@
 package oop4;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        //bissl ideen rumprobieren:
-        HashMap<Rider, Horse> mapping = new HashMap<>();
-        Stable s1 = new Stable();
+Stable st1 = new Stable();
+        RiderHorseMatching rhma = new RiderHorseMatching(st1.getRiders(), st1.getHorses());
 
-        System.out.println("Reiter: ");
-        for(Rider r : s1.getRiders()){
-            System.out.print(r.getName() +" " + r.getCharacteristic() + " ");
-            for(Horse h : r.getPreferences()){
-                System.out.print(h.getName() + ", ");
-            }
-            System.out.println();
-        }
+        List<Horse> sortedHorses = rhma.sortHorsesDescending(st1.getHorses());
+        List<Rider> sortedRiders = rhma.sortRidersAscending(st1.getRiders());
+        List<String> mylist = new ArrayList<>();
 
-        System.out.println("\nPferde: ");
-        for(Horse h : s1.getHorses()){
-            System.out.println(h.getName()+ " " + h.getCharacteristic());
-        }
-       
-        
-
+        //MatchingResult result = rhma.matching(st1.getRiders(), st1.getHorses());
+        MatchingResult result = rhma.matching(sortedRiders, sortedHorses);
+        System.out.println(result.toString());
+        System.out.println("Anzahl Personen mit Wunsch: " + sortedRiders.size());
+        System.out.println("Calls zum vergleich von sortiertenlisten Ausfruf vs unsortiert: " + rhma.calls);
     }
 }
