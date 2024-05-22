@@ -73,12 +73,7 @@ public class RiderHorseMatching{
     }
 
     public boolean isMatch(Rider r, Horse h) {
-        if (r.getCharacteristic() >= h.getCharacteristic() && r.getPreferences().contains(h)) {
-            return true;
-        }
-
-        return false;
-
+        return r.getCharacteristic() >= h.getCharacteristic() && r.getPreferences().contains(h);
     }
 
     public void fillAdjacencyMatrix() {
