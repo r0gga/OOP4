@@ -12,7 +12,7 @@ public class Stable {
     public Stable(){
         riders = new ArrayList<>();
         horses = new ArrayList<>();
-        fillStable();
+        fillStableOriginal();
     }
     public void fillStablev2(){
         Horse alex = new Horse("Alex", 2);
