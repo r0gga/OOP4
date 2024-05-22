@@ -112,13 +112,13 @@ public class RiderHorseMatching{
         
         
         MatchingResult result = new MatchingResult();
-
+        calls++;
         for(Rider rider : riders){
             for(Horse horse: horses){
-                calls++;
+               
                 if(isMatch(rider, horse)){
                     List<Rider> new_riders = new ArrayList<>(riders.size());
-                    new_riders.addAll(riders);
+                    new_riders.addAll(riders); //muss so sonst java.util.ConcurrentModificationException
                     new_riders.remove(rider);
 
                     List<Horse> new_horses = new ArrayList<>(horses.size());
