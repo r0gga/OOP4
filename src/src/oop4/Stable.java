@@ -53,7 +53,7 @@ public class Stable {
         horses.add(zackzack);
     }
 
-    //characteristic 0: anfänger, 1: gute reiter, 2: sehr gute reiter
+    //characteristic: 0: anfänger, 1: gute reiter, 2: sehr gute reiter
     public void fillStableOriginal(){
         Horse alex = new Horse("Alex", 0);
         Horse nicki = new Horse("Nicki", 1);
