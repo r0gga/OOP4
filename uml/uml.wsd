@@ -1,6 +1,11 @@
 @startuml
+'left to right direction
 scale 2
 skinparam classAttributeIconSize 0
+skinparam fixCircleLabelOverlapping true
+skinparam linetype ortho
+
+note "n = Anzahl Pferde\nm = Anzahl Reiter\nk <= min{m, n}" as N1
 
 class StableMember {
     - NAME: String
@@ -67,7 +72,7 @@ Rider "0...k" o-- "*" MatchingResult
 Horse "n" o-- "1" RiderHorseMatching
 Rider "m" o-- "1" RiderHorseMatching
 
-Horse "n" o-- "1" Stable
+Horse "n" o-- "1" Stable 
 Rider "m" o-- "1" Stable
 
 @enduml
