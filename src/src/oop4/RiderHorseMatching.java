@@ -12,7 +12,7 @@ public class RiderHorseMatching{
     private final List<Horse> horses;
     private final List<Rider> sortedRiders;
     private final List<Horse> sortedHorses;
-    private boolean[][] adjacencyMatrix;
+    //private boolean[][] adjacencyMatrix;
     int calls;
 
     public RiderHorseMatching(List<Rider> riders, List<Horse> horses) {
@@ -24,11 +24,10 @@ public class RiderHorseMatching{
 
         // adjacencyMatrix[i][j]==true: i-ter Reiter in sortedRiders matcht mit j-tem
         // Pferd in sortedHorses
-        adjacencyMatrix = new boolean[sortedRiders.size()][sortedHorses.size()];
-        fillAdjacencyMatrix();
+        //adjacencyMatrix = new boolean[sortedRiders.size()][sortedHorses.size()];
+        //fillAdjacencyMatrix();
     }
 
-    // private machen
     public List<Horse> sortHorsesDescending(List<Horse> list) {
         List<Horse> sorted = new ArrayList<>();
         for (Horse h : list) {
@@ -76,6 +75,7 @@ public class RiderHorseMatching{
         return r.getCharacteristic() >= h.getCharacteristic() && r.getPreferences().contains(h);
     }
 
+    /*
     public void fillAdjacencyMatrix() {
         for (int i = 0; i < sortedRiders.size(); i++) {
             for (int j = 0; j < sortedHorses.size(); j++) {
@@ -87,6 +87,7 @@ public class RiderHorseMatching{
             }
         }
     }
+     
 
     public void printAdjacencyMatrix() {
         System.out.print("      ");
@@ -102,6 +103,7 @@ public class RiderHorseMatching{
             System.out.println();
         }
     }
+    */
 
     public MatchingResult matching (List<Rider> riders, List<Horse> horses){
         

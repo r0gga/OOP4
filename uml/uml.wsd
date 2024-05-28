@@ -1,0 +1,73 @@
+@startuml
+scale 2
+skinparam classAttributeIconSize 0
+
+class StableMember {
+    - NAME: String
+    - CHARACTERISTIC: int
+    + StableMember(name: String, characteristic: int)
+    + getName(): String
+    + getCharacteristic(): int
+}
+
+class Horse {
+    + Horse(name: String, characteristic: int)
+}
+
+class Rider {
+    - PREFERENCES: Set<Horse>
+    + Rider(name: String, characteristic: int, preferences: Set<Horse>)
+    + getPreferences(): Set<Horse>
+}
+
+class Stable {
+    - riders: List<Rider>
+    - horses: List<Horse>
+    + Stable()
+    + fillStablev2()
+    + fillStableOriginal()
+    + getRiders(): List<Rider>
+    + getHorses(): List<Horse>
+}
+
+class MatchingResult {
+    - score: int
+    - map: Map<Rider, Horse>
+    + MatchingResult()
+    + getScore(): int
+    + increaseScore()
+    + getMap(): Map<Rider, Horse>
+    + setMap(map: Map<Rider, Horse>)
+    + toString(): String
+}
+
+class RiderHorseMatching {
+    - riders: List<Rider>
+    - horses: List<Horse>
+    - sortedRiders: List<Rider>
+    - sortedHorses: List<Horse>
+    - calls: int
+    + RiderHorseMatching(riders: List<Rider>, horses: List<Horse>)
+    + sortHorsesDescending(list: List<Horse>): List<Horse>
+    + sortRidersAscending(list: List<Rider>): List<Rider>
+    + isMatch(r: Rider, h: Horse): boolean
+    + matching(riders: List<Rider>, horses: List<Horse>): MatchingResult
+}
+
+class Main {
+    + main(args: String[])
+}
+
+Rider --|> StableMember
+Horse --|> StableMember
+Rider "0...m" o-- "1...n" Horse
+Horse "0...k" o-- "*" MatchingResult
+Rider "0...k" o-- "*" MatchingResult
+
+Horse "n" o-- "1" RiderHorseMatching
+Rider "m" o-- "1" RiderHorseMatching
+
+Horse "n" o-- "1" Stable
+Rider "m" o-- "1" Stable
+
+@enduml
