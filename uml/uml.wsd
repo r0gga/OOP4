@@ -65,14 +65,15 @@ class Main {
 
 Rider --|> StableMember
 Horse --|> StableMember
+
 Rider "0...m" o-- "1...n" Horse
-Horse "0...k" o-- "*" MatchingResult
-Rider "0...k" o-- "*" MatchingResult
+Horse "0...k" --o "*" MatchingResult
+Rider "0...k" --o "*" MatchingResult
 
-Horse "n" o-- "1" RiderHorseMatching
-Rider "m" o-- "1" RiderHorseMatching
+Horse "n" --o "1" RiderHorseMatching
+Rider "m" --o "1" RiderHorseMatching
 
-Horse "n" o-- "1" Stable 
-Rider "m" o-- "1" Stable
+Horse "n" --o "1" Stable 
+Rider "m" --o "1" Stable
 
 @enduml
