@@ -4,11 +4,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+/**
+ * The Stable class represents a stable containing a list of riders and horses.
+ * It provides methods to populate the stable with default data and to retrieve the lists of riders and horses.
+ */
 
 public class Stable {
+    /**
+     * A list of riders in the stable.
+     */
     private List<Rider> riders;
+    /**
+     * A list of horses in the stable.
+     */
     private List<Horse> horses;
 
+    /**
+     * Constructs a new Stable instance and populates it with the original default data.
+     */
     public Stable(){
         riders = new ArrayList<>();
         horses = new ArrayList<>();
@@ -52,6 +65,9 @@ public class Stable {
         horses.add(zausel);
         horses.add(zackzack);
     }
+    /**
+     * Populates the stable with the original default set of riders and horses.
+     */
 
     //characteristic: 0: anfänger, 1: gute reiter, 2: sehr gute reiter
     public void fillStableOriginal(){
@@ -93,9 +109,19 @@ public class Stable {
         horses.add(zackzack);
     }
 
+    /**
+     * Gets the list of riders in the stable.
+     *
+     * @return A list of riders.
+     */
     public List<Rider> getRiders(){
         return this.riders;
     }
+    /**
+     * Gets the list of horses in the stable.
+     *
+     * @return A list of horses.
+     */
     public List<Horse> getHorses(){
         return this.horses;
     }
