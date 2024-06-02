@@ -5,16 +5,44 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.MatchResult;
+/**
+ * The RiderHorseMatching class provides functionality to match riders with horses
+ * based on their characteristics and preferences. It sorts the horses in descending
+ * order and the riders in ascending order by their characteristic levels, and finds
+ * the optimal matching.
+ */
 
 public class RiderHorseMatching{
 
+    /**
+     * The list of riders.
+     */
     private final List<Rider> riders;
+    /**
+     * The list of horses.
+     */
     private final List<Horse> horses;
+    /**
+     * The list of sorted riders in ascending order by their characteristic levels.
+     */
     private final List<Rider> sortedRiders;
+    /**
+     * The list of sorted horses in descending order by their characteristic levels.
+     */
     private final List<Horse> sortedHorses;
     //private boolean[][] adjacencyMatrix;
+    /**
+     * The number of calls made to the matching function.
+     */
     int calls;
 
+    /**
+     * Constructs a new RiderHorseMatching instance with the specified list of riders and horses.
+     * Initializes the sorted lists and the call count.
+     *
+     * @param riders The list of riders.
+     * @param horses The list of horses.
+     */
     public RiderHorseMatching(List<Rider> riders, List<Horse> horses) {
         this.riders = riders;
         this.horses = horses;
@@ -28,6 +56,12 @@ public class RiderHorseMatching{
         //fillAdjacencyMatrix();
     }
 
+    /**
+     * Sorts the horses in descending order by their characteristic levels.
+     *
+     * @param list The list of horses to be sorted.
+     * @return A list of horses sorted in descending order by their characteristic levels.
+     */
     public List<Horse> sortHorsesDescending(List<Horse> list) {
         List<Horse> sorted = new ArrayList<>();
         for (Horse h : list) {
@@ -49,6 +83,12 @@ public class RiderHorseMatching{
         return sorted;
     }
 
+    /**
+     * Sorts the riders in ascending order by their characteristic levels.
+     *
+     * @param list The list of riders to be sorted.
+     * @return A list of riders sorted in ascending order by their characteristic levels.
+     */
     public List<Rider> sortRidersAscending(List<Rider> list) {
         List<Rider> sorted = new ArrayList<>();
 
@@ -71,6 +111,13 @@ public class RiderHorseMatching{
         return sorted;
     }
 
+    /**
+     * Checks if a rider and a horse are a match based on their characteristics and preferences.
+     *
+     * @param r The rider.
+     * @param h The horse.
+     * @return True if the rider can ride the horse and the horse is in the rider's preferences, false otherwise.
+     */
     public boolean isMatch(Rider r, Horse h) {
         return r.getCharacteristic() >= h.getCharacteristic() && r.getPreferences().contains(h);
     }
@@ -105,6 +152,14 @@ public class RiderHorseMatching{
     }
     */
 
+    /**
+     * Finds the optimal matching of riders to horses and returns the result.
+     * The matching is done recursively and the solution with the highest score is selected.
+     *
+     * @param riders The list of riders to be matched.
+     * @param horses The list of horses to be matched.
+     * @return The matching result containing the optimal pairs and the score.
+     */
     public MatchingResult matching (List<Rider> riders, List<Horse> horses){
         
         
