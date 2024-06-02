@@ -13,6 +13,12 @@ import java.util.Map;
  * @version 1.0
  */
 public class Main {
+    /**
+     * The main method is the entry point of the application.
+     * It initializes the stable, performs rider-horse matching, and prints the results.
+     *
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
         Stable st1 = new Stable();
         RiderHorseMatching rhma = new RiderHorseMatching(st1.getRiders(), st1.getHorses());
