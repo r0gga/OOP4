@@ -5,9 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The Main class serves as the entry point for the Rider-Horse Matching application.
+ * It creates instances of the Stable and RiderHorseMatching classes, sorts the riders and horses,
+ * performs the matching, and prints the results.
+ * @author Oskar Oetken, Aaron Masur
+ * @version 1.0
+ */
 public class Main {
     public static void main(String[] args) {
-Stable st1 = new Stable();
+        Stable st1 = new Stable();
         RiderHorseMatching rhma = new RiderHorseMatching(st1.getRiders(), st1.getHorses());
 
         List<Horse> sortedHorses = rhma.sortHorsesDescending(st1.getHorses());
